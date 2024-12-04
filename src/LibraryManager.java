@@ -24,47 +24,21 @@ public class LibraryManager{
                     System.out.println("Enter the title: ");
                     String bookTitle = scnr.nextLine();
                     while(bookTitle.trim().isEmpty()){
-                        System.out.println("title cannot be empty> Please enter title: ");
+                        System.out.println("title cannot be empty Please enter title: ");
                         bookTitle = scnr.nextLine();
                     }
                     System.out.println("Enter the author: ");
-                    String bookAuthor = scnr.nextLine();
-                    while(bookAuthor.trim().isEmpty()){
+                    String bookAuthor = scnr.nextLine().trim();
+                    while(bookAuthor.isEmpty()){
                         System.out.println("Author cannot be empty please enter the author: ");
+                        bookAuthor = scnr.nextLine().trim();
                     }
                     System.out.println("Enter the year published: ");
                     int bookYear = scnr.nextInt();
-                    while(true){
-                        if (scnr.hasNextInt()){
-                            bookYear = scnr.nextInt();
-                            break;
-                        } else {
-                            System.out.println("Invalid input please enter a valid year: ");
-                            scnr.nextLine();
-                        }
-                    }
                     System.out.println("Enter the item ID: ");
                     int bookID = scnr.nextInt();
-                    while (true){
-                        if(scnr.hasNextLine()){
-                            bookID = scnr.nextInt();
-                            break;
-                        } else {
-                            System.out.println("Invalid input please enter a valid item ID: ");
-                            scnr.nextLine();
-                        }
-                    }
                     System.out.println("Enter the number of pages: ");
                     int numPages = scnr.nextInt();
-                    while(true){
-                        if (scnr.hasNextInt()){
-                            numPages = scnr.nextInt();
-                            break;
-                        } else{
-                            System.out.println("Invalid input please enter a valid number of pages: ");
-                            scnr.nextLine();//clears invalid input
-                        }
-                    }
                     scnr.nextLine();
 
                     Book book = new Book(bookTitle, bookAuthor, bookYear, bookID, numPages);
@@ -91,26 +65,8 @@ public class LibraryManager{
                     }
                     System.out.println("Enter the year published: ");
                     int magYear = scnr.nextInt();
-                    while (true) {
-                        if (scnr.hasNextInt()){
-                            magYear = scnr.nextInt();
-                            break;
-                        } else{
-                            System.out.println("Invalid input please enter a valid year: ");
-                            scnr.nextLine();
-                        }
-                    }
                     System.out.println("Enter the item ID: ");
                     int magID = scnr.nextInt();
-                    while (true){
-                        if(scnr.hasNextInt()){
-                            magID = scnr.nextInt();
-                            break;
-                        } else {
-                            System.out.println("Invalid input please enter a valid item ID: ");
-                            scnr.nextLine();
-                        }
-                    }
                     scnr.nextLine();
                     System.out.println("Enter the issue Frequency (e.g., Monthly, Weekly): ");
                     String issueFrequency = scnr.nextLine();
@@ -140,37 +96,10 @@ public class LibraryManager{
                     }
                     System.out.println("Enter the year published: ");
                     int dvdYear = scnr.nextInt();
-                    while (true){
-                        if (scnr.hasNextInt()){
-                            dvdYear = scnr.nextInt();
-                            break;
-                        } else {
-                            System.out.println("Invalid input please enter a valid year: ");
-                            scnr.nextLine();
-                        }
-                    }
                     System.out.println("Enter the item ID: ");
                     int dvdID = scnr.nextInt();
-                    while(true) {
-                        if (scnr.hasNextInt()){
-                            dvdID = scnr.nextInt();
-                            break;
-                        } else {
-                            System.out.println("Invalid input Please enter a valid item ID: ");
-                            scnr.nextLine();
-                        }
-                    }
                     System.out.println("Enter the duration (in minutes): ");
                     int duration = scnr.nextInt();
-                    while(true){
-                        if (scnr.hasNextInt()){
-                            duration = scnr.nextInt();
-                            break;
-                        } else{
-                            System.out.println("Invalid input please enter a valid duration (in minutes): ");
-                            scnr.nextLine();
-                        }
-                    }
                     scnr.nextLine();
 
                     DVD dvd = new DVD(dvdTitle, dvdAuthor, dvdYear, dvdID, duration);
